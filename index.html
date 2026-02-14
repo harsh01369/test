@@ -3,87 +3,74 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bhairav Aaradhyaa | Launching Soon</title>
 
-    <title>Bhairav Aaradhyaa | Sacred Spiritual Knowledge Portal</title>
+    <meta name="description" content="Bhairav Aaradhyaa is launching soon. A sacred spiritual platform dedicated to Bhairava, Shiva and Shakti." />
 
-    <meta name="description" content="Bhairav Aaradhyaa is a sacred spiritual platform dedicated to Bhairava, Shiva, and Shakti. Explore stotras, naam japa, tantric philosophy, and divine guidance." />
-
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Dancing+Script:wght@600&family=Noto+Serif&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header">
-        <div class="brand">
-            <h1 class="brand-name">Bhairav Aaradhyaa</h1>
-            <p class="tagline">A Sacred Spiritual Knowledge Portal</p>
+    <div class="container">
+
+        <h1 class="brand-name">Bhairav Aaradhyaa</h1>
+
+        <p class="tagline">A Sacred Spiritual Knowledge Portal</p>
+
+        <div class="launch-box">
+            <h2>Launching In</h2>
+
+            <div id="countdown">
+                <div><span id="days">00</span><p>Days</p></div>
+                <div><span id="hours">00</span><p>Hours</p></div>
+                <div><span id="minutes">00</span><p>Minutes</p></div>
+                <div><span id="seconds">00</span><p>Seconds</p></div>
+            </div>
         </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>ॐ नमः शिवाय</h2>
-        <p>
-            Dedicated to the divine wisdom of Bhairava, Shiva, and Shakti.
-            A humble offering for seekers of truth, discipline, and spiritual growth.
+        <p class="launch-message">
+            The divine journey begins soon.  
+            Prepare for sacred knowledge, stotras, naam japa, and spiritual guidance.
         </p>
-    </section>
 
-    <!-- About Section -->
-    <section class="section">
-        <h3>About Bhairav Aaradhyaa</h3>
-        <p>
-            Bhairav Aaradhyaa is a spiritual platform created to preserve and share
-            authentic Shaivite and tantric knowledge. The portal provides access to
-            sacred stotras, naam japa practices, philosophical teachings, and
-            structured spiritual guidance for seekers at all levels.
+        <p class="domain">
+            www.yourdomain.com
         </p>
-    </section>
 
-    <!-- Services Section -->
-    <section class="section light">
-        <h3>What We Offer</h3>
-        <ul class="services">
-            <li>Sacred Stotras & Hymns</li>
-            <li>Naam Japa & Spiritual Practices</li>
-            <li>Tantric & Shaivite Philosophy</li>
-            <li>Guidance for Spiritual Seekers</li>
-            <li>Educational & Devotional Content</li>
-        </ul>
-    </section>
+        <footer>
+            <p>ॐ नमः शिवाय</p>
+            <p>© 2025 Bhairav Aaradhyaa</p>
+        </footer>
 
-    <!-- Future Notice -->
-    <section class="section">
-        <h3>Upcoming Features</h3>
-        <p>
-            Additional sections dedicated to Shiva, Shakti, Guru, Krishna, and Hanuman
-            will be introduced gradually. Audio content, learning paths, and community
-            features are planned for the future.
-        </p>
-    </section>
+    </div>
 
-    <!-- Contact Section -->
-    <section class="section light">
-        <h3>Contact</h3>
-        <p>
-            For inquiries, collaborations, or spiritual discussions:<br />
-            <strong>Email:</strong> contact@bhairavaaradhyaa.com
-        </p>
-    </section>
+    <script>
+        // SET YOUR LAUNCH DATE HERE
+        const launchDate = new Date("March 16, 2026 00:00:00").getTime();
 
-    <!-- Footer -->
-    <footer class="footer">
-        <p class="shloka">
-            अपराधसहस्राणि क्रियन्तेऽहर्निशं मया ।<br />
-            दासोऽयमिति मां मत्वा क्षमस्व परमेश्वर ॥
-        </p>
-        <p class="copyright">
-            © 2025 Bhairav Aaradhyaa. All rights reserved.
-        </p>
-    </footer>
+        const timer = setInterval(function () {
+            const now = new Date().getTime();
+            const distance = launchDate - now;
+
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = hours;
+            document.getElementById("minutes").innerHTML = minutes;
+            document.getElementById("seconds").innerHTML = seconds;
+
+            if (distance < 0) {
+                clearInterval(timer);
+                document.getElementById("countdown").innerHTML = "We Are Live!";
+            }
+        }, 1000);
+    </script>
 
 </body>
 </html>
+
